@@ -34,7 +34,7 @@ $(function () {
     e.preventDefault();
 
     const checkInDate = e.target["checkin"]?.value;
-    const checkOutDate = e.target["checkout"]?.valu;
+    const checkOutDate = e.target["checkout"]?.value;
     const numberOfRooms = e.target["noOfRooms"]?.value;
     const numberOfAdults = e.target["noOfAdults"]?.value;
     const numberOfChildren = e.target["noOfChildren"]?.value;
