@@ -1,0 +1,22 @@
+// OWL
+@use "../owl-carousal/core";
+@use "../owl-carousal/animate";
+@use "../owl-carousal/lazyload";
+@use "../owl-carousal/theme.default";
+@use "../owl-carousal/nav";
+
+// Banner Section
+@use "../components/home/banner";
+// Book Form
+@use "../components/book-form";
+// About Section
+@use "../components/home/about";
+
+@media screen and (min-width: 992px) {
+  body {
+    padding-bottom: 80px;
+  }
+  .back-to-top {
+    bottom: 100px;
+  }
+}

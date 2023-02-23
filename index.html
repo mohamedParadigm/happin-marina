@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happin Marina</title>
+    <link rel="shortcut icon" href="#" />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap/routes/home.css" />
     <!-- Bootstrap Select -->
     <link
       rel="stylesheet"
@@ -17,176 +18,446 @@
       rel="stylesheet"
       href="plugins/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker3.min.css"
     />
-    <!-- Book Form -->
-    <link rel="stylesheet" href="css/book-form.css" />
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
-    <div class="container-fluid py-5">
-      <div class="mobile-book-trigger d-lg-none">
-        <button
-          type="button"
-          class="btn btn-secondary w-100"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#bookFormOffcanvas"
-          aria-controls="bookFormOffcanvas"
+    <div class="app">
+      <main class="app-content">
+        <!-- Start of Banner Section -->
+        <section class="home-banner">
+          <div class="owl-carousel owl-theme" id="homeSliderBanner">
+            <div class="banner-item">
+              <div
+                class="owl-lazy blur-up banner-item-img"
+                data-src="images/home/banner-04.jpg"
+              ></div>
+
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <span class="banner-item-sub-title"
+                      >The ultimate luxury experience</span
+                    >
+                    <h2 class="banner-item-title">
+                      The Perfect <br />
+                      Base For You
+                    </h2>
+                    <div class="row align-items-center">
+                      <div class="col">
+                        <a href="#" class="btn-main">take a tour</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn-transparent">learn more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="banner-item">
+              <div
+                class="owl-lazy blur-up banner-item-img"
+                data-src="images/home/banner-05.jpg"
+              ></div>
+
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <span class="banner-item-sub-title"
+                      >The ultimate luxury experience</span
+                    >
+                    <h2 class="banner-item-title">
+                      The Perfect <br />
+                      Base For You
+                    </h2>
+                    <div class="row align-items-center">
+                      <div class="col">
+                        <a href="#" class="btn-main">take a tour</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn-transparent">learn more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of Banner Section -->
+
+        <!-- Start of Book Form -->
+        <div
+          class="offcanvas offcanvas-bottom text-bg-dark book-form-canvas"
+          tabindex="-1"
+          id="bookFormOffcanvas"
+          aria-labelledby="bookFormOffcanvasLabel"
         >
-          BOOK NOW
-        </button>
-      </div>
-
-      <div
-        class="offcanvas offcanvas-bottom text-bg-dark book-form-canvas"
-        tabindex="-1"
-        id="bookFormOffcanvas"
-        aria-labelledby="bookFormOffcanvasLabel"
-      >
-        <div class="offcanvas-header d-lg-none">
-          <h5 class="offcanvas-title" id="bookFormOffcanvasLabel">
-            Book Your Room
-          </h5>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body book-form-content">
-          <form
-            class="row g-3 justify-content-center align-items-lg-center"
-            id="rateTigger"
-          >
-            <div class="col-12 col-lg">
-              <label for="checkin" class="form-label">Check in date</label>
-              <!-- data-default_date="20/Feb/2023" -->
-              <div
-                class="input-group date"
-                data-provide="datepicker"
-                data-date-format="dd M yyyy"
-                data-date-autoclose="true"
-                data-date-toggle-active="true"
-                id="checkin"
-              >
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Check in date"
-                  required
-                  name="checkin"
-                />
-                <span class="input-group-addon">
-                  <img
-                    src="plugins/bootstrap-datepicker-1.9.0/css/date-icon.svg"
-                    width="18"
-                    height="18"
-                    alt="Check in date"
+          <div class="offcanvas-header d-lg-none">
+            <h5 class="offcanvas-title" id="bookFormOffcanvasLabel">
+              Book Your Room
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body book-form-content">
+            <form
+              class="row g-3 justify-content-center align-items-lg-center"
+              id="rateTigger"
+            >
+              <div class="col-12 col-lg">
+                <label for="checkin" class="form-label">Check in date</label>
+                <!-- data-default_date="20/Feb/2023" -->
+                <div
+                  class="input-group date"
+                  data-provide="datepicker"
+                  data-date-format="dd M yyyy"
+                  data-date-autoclose="true"
+                  data-date-toggle-active="true"
+                  id="checkin"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Check in date"
+                    required
+                    name="checkin"
                   />
-                </span>
+                  <span class="input-group-addon">
+                    <img
+                      src="plugins/bootstrap-datepicker-1.9.0/css/date-icon.svg"
+                      width="18"
+                      height="18"
+                      alt="Check in date"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg">
+                <label for="checkout" class="form-label">Check out date</label>
+                <div
+                  class="input-group date"
+                  data-provide="datepicker"
+                  data-date-format="dd M yyyy"
+                  data-date-autoclose="true"
+                  data-date-toggle-active="true"
+                  data-date-start-date="+1d"
+                  id="checkout"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Check out date"
+                    required
+                    name="checkout"
+                  />
+                  <span class="input-group-addon">
+                    <img
+                      src="plugins/bootstrap-datepicker-1.9.0/css/date-icon.svg"
+                      width="18"
+                      height="18"
+                      alt="Check out date"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg">
+                <label for="noOfRooms" class="form-label">Rooms</label>
+                <select
+                  class="selectpicker"
+                  title="Number of Rooms"
+                  data-size="3"
+                  required
+                  name="noOfRooms"
+                  id="noOfRooms"
+                >
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+
+              <div class="col-12 col-lg">
+                <label for="noOfAdults" class="form-label">Adults</label>
+                <select
+                  class="selectpicker"
+                  title="Number of Adults"
+                  data-size="3"
+                  required
+                  name="noOfAdults"
+                  id="noOfAdults"
+                >
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+
+              <div class="col-12 col-lg">
+                <label for="noOfChildren" class="form-label">Children</label>
+                <select
+                  class="selectpicker"
+                  title="Number of Children"
+                  data-size="3"
+                  required
+                  name="noOfChildren"
+                  id="noOfChildren"
+                >
+                  <option value="0" selected>0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+
+              <div class="col-12 col-lg-auto align-self-end">
+                <button
+                  type="submit"
+                  class="btn-transparent w-100 mt-auto mt-lg-0"
+                >
+                  Book Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End of Book Form -->
+
+        <!-- Start of About Section -->
+        <section class="home-about p-100">
+          <!-- <img
+            src="images/home/h1-about-bg.png"
+            data-src="images/home/h1-about-bg.png"
+            alt="h1-about-bg.png"
+            class="lazy blur-up about-heading-bg"
+          /> -->
+          <div class="container">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-12 col-lg-6">
+                <div class="info">
+                  <div class="mb-5">
+                    <span class="about-sub-title"
+                      >The Hotelina Luxury Hotel.</span
+                    >
+                    <h2 class="about-title">
+                      Find The Best Hotel For Accomodation.
+                    </h2>
+                    <p class="about-desc mb-2">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Reprehenderit minima, voluptatem accusantium iusto cumque
+                      doloribus possimus autem facere sed aperiam expedita
+                      itaque, rem maxime adipisci blanditiis tempore culpa
+                      molestias quod assumenda exercitationem?
+                    </p>
+                    <p class="about-desc mb-0">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eos voluptatem officiis ut molestias praesentium nobis
+                      iusto!
+                    </p>
+                  </div>
+                  <ul class="about-counter-items-wrapper">
+                    <li class="about-counter-item">
+                      <img
+                        src="images/home/about-01.png"
+                        data-src="images/home/about-01.png"
+                        width="80"
+                        height="80"
+                        alt="about-01"
+                        class="lazy blur-up"
+                      />
+                      <h3 class="mb-2">
+                        <span class="counter">84</span>k<span class="plus"
+                          >+</span
+                        >
+                      </h3>
+                      <p class="mb-0">Projects are Completed</p>
+                    </li>
+
+                    <li class="about-counter-item">
+                      <img
+                        src="images/home/about-02.png"
+                        data-src="images/home/about-02.png"
+                        width="80"
+                        height="80"
+                        alt="about-02"
+                        class="lazy blur-up"
+                      />
+                      <h3 class="mb-2">
+                        <span class="counter">10</span>M<span class="plus"
+                          >+</span
+                        >
+                      </h3>
+                      <p class="mb-0">Active Backers Around World</p>
+                    </li>
+
+                    <li class="about-counter-item">
+                      <img
+                        src="images/home/about-03.png"
+                        data-src="images/home/about-03.png"
+                        width="80"
+                        height="80"
+                        alt="about-03"
+                        class="lazy blur-up"
+                      />
+                      <h3 class="mb-2">
+                        <span class="counter">2</span>k<span class="plus"
+                          >+</span
+                        >
+                      </h3>
+                      <p class="mb-0">Categories Served</p>
+                    </li>
+
+                    <li class="about-counter-item">
+                      <img
+                        src="images/home/about-04.png"
+                        data-src="images/home/about-04.png"
+                        width="80"
+                        height="80"
+                        alt="about-04"
+                        class="lazy blur-up"
+                      />
+                      <h3 class="mb-2">
+                        <span class="counter">100</span>M<span class="plus"
+                          >+</span
+                        >
+                      </h3>
+                      <p class="mb-0">Ideas Raised Funds</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-8 col-lg-6">
+                <div class="about-img">
+                  <img
+                    src="images/home/home-about-img.png"
+                    data-src="images/home/home-about-img.png"
+                    width="500"
+                    height="527"
+                    alt="home-about-img"
+                    class="lazy blur-up"
+                  />
+
+                  <div class="reviews">
+                    <h3 class="review-header mb-2">5.3</h3>
+                    <ul
+                      class="stars d-flex align-items-center justify-content-center mb-2"
+                    >
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                    </ul>
+                    <span>2000, Reviews</span>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="col-12 col-lg">
-              <label for="checkout" class="form-label">Check out date</label>
-              <div
-                class="input-group date"
-                data-provide="datepicker"
-                data-date-format="dd M yyyy"
-                data-date-autoclose="true"
-                data-date-toggle-active="true"
-                data-date-start-date="+1d"
-                id="checkout"
-              >
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Check out date"
-                  required
-                  name="checkout"
-                />
-                <span class="input-group-addon">
-                  <img
-                    src="plugins/bootstrap-datepicker-1.9.0/css/date-icon.svg"
-                    width="18"
-                    height="18"
-                    alt="Check out date"
-                  />
-                </span>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg">
-              <label for="noOfRooms" class="form-label">Rooms</label>
-              <select
-                class="selectpicker"
-                title="Number of Rooms"
-                data-size="3"
-                required
-                name="noOfRooms"
-                id="noOfRooms"
-              >
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-            </div>
-
-            <div class="col-12 col-lg">
-              <label for="noOfAdults" class="form-label">Adults</label>
-              <select
-                class="selectpicker"
-                title="Number of Adults"
-                data-size="3"
-                required
-                name="noOfAdults"
-                id="noOfAdults"
-              >
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-            </div>
-
-            <div class="col-12 col-lg">
-              <label for="noOfChildren" class="form-label">Children</label>
-              <select
-                class="selectpicker"
-                title="Number of Children"
-                data-size="3"
-                required
-                name="noOfChildren"
-                id="noOfChildren"
-              >
-                <option value="0" selected>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-
-            <div class="col-12 col-lg-auto align-self-end">
-              <button type="submit" class="btn btn-secondary w-100 mt-auto mt-lg-0">
-                Book Now
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+          </div>
+        </section>
+        <!-- End of About Section -->
+      </main>
     </div>
+
+    <!-- Start of Mobile Book Trigger -->
+    <div class="mobile-book-trigger d-lg-none">
+      <button
+        type="button"
+        class="btn btn-dark w-100"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#bookFormOffcanvas"
+        aria-controls="bookFormOffcanvas"
+      >
+        BOOK NOW
+      </button>
+    </div>
+    <!-- End of Mobile Book Trigger -->
+
+    <!-- Start of Back Top -->
+    <button type="button" class="btn back-to-top" id="backToTop">
+      <img
+        src="images/icons/chevrons-up-w.svg"
+        width="24"
+        height="24"
+        alt="go to top"
+      />
+    </button>
+    <!-- End of Back Top -->
+
     <!-- Jquery -->
-    <script src="plugins/jquery-3.6.0.min.js"></script>
+    <script src="plugins/jquery-3.6.0.min.js" defer></script>
     <!-- Bootstrap -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <!-- OWL Carousal -->
+    <script src="plugins/owl.carousel.min.js" defer></script>
+    <!-- Lazy Load -->
+    <script src="plugins/lazyload.min.js" defer></script>
     <!-- Bootstrap Select -->
-    <script src="plugins/bootstrap-select-1.13.14/js/bootstrap-select.min.js"></script>
+    <script
+      src="plugins/bootstrap-select-1.13.14/js/bootstrap-select.min.js"
+      defer
+    ></script>
     <!-- Bootstrap Datepicker -->
-    <script src="plugins/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script
+      src="plugins/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js"
+      defer
+    ></script>
+    <!-- Counter -->
+    <script src="plugins/jquery.countTo.js" defer></script>
     <!-- Page Script -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <script src="js/bookform.js" defer></script>
   </body>
 </html>

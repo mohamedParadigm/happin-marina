@@ -1,0 +1,35 @@
+// Simple Prefix
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
+// Center Elements Using Css Flex
+@mixin flexCentering($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: if($direction == "column", column, null);
+}
+// Truncate Specific number of lines
+@mixin truncate($num) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  line-clamp: $num;
+  -webkit-box-orient: vertical;
+}
+// Overlay
+@mixin overlay($color) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  background-color: $color;
+}

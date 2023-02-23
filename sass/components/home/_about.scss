@@ -1,0 +1,114 @@
+// Variables
+@use "../helpers/variables" as vars;
+// Mixins
+@use "../helpers/mixins";
+
+.home-about {
+  position: relative;
+  // .about-heading-bg {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 0;
+  //   @include mixins.prefix(transform, translateY(-50%), webkit moz);
+  //   z-index: -1;
+  // }
+  .info {
+    .about-sub-title {
+      color: vars.$main-color;
+      font-size: calc(1rem + 0.25vw);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .about-title {
+      font-size: calc(2rem + 1vw);
+      font-weight: 700;
+    }
+    @media screen and (vars.$max-lg) {
+      margin-bottom: 100px;
+    }
+    .about-counter-items-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      .about-counter-item {
+        padding: 1rem;
+        text-align: center;
+        @include mixins.flexCentering(column);
+        border-radius: vars.$radius;
+        box-shadow: vars.$shadow-sm;
+        > img {
+          width: 80px;
+          height: 80px;
+          display: block;
+          margin-bottom: 1.25rem;
+        }
+        .plus {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+  .about-img {
+    text-align: center;
+    position: relative;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+    .reviews {
+      position: absolute;
+      min-width: 180px;
+      padding: 1.25rem;
+      background-color: vars.$light;
+      top: -3rem;
+      right: 0;
+      box-shadow: vars.$shadow-sm;
+      border: 1px solid vars.$border-color;
+      border-radius: vars.$radius;
+      .review-header {
+        font-size: calc(2rem + 1vw);
+      }
+    }
+    // &::before,
+    // &::after {
+    //   content: url(../images/home/about-vec-top.png);
+    //   position: absolute;
+    //   z-index: -1;
+    // }
+    // &::before {
+    //   left: 0;
+    //   top: -40px;
+    // }
+    // &::after {
+    //   right: 0;
+    //   bottom: -40px;
+    // }
+  }
+}
+[dir="rtl"] {
+  .home-about {
+    // .about-heading-bg {
+    //   left: auto;
+    //   right: 0;
+    //   @include mixins.prefix(
+    //     transform,
+    //     translateY(-50%) scaleX(-1),
+    //     webkit moz
+    //   );
+    // }
+    .about-img {
+      .reviews {
+        right: auto;
+        left: 0;
+      }
+      // &::before {
+      //   left: auto;
+      //   right: 0;
+      // }
+      // &::after {
+      //   right: auto;
+      //   left: 0;
+      // }
+    }
+  }
+}

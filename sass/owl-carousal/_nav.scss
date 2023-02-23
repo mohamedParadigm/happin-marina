@@ -1,0 +1,51 @@
+// Variables
+@use "../components/helpers/variables" as vars;
+// Mixins
+@use "../components/helpers/mixins";
+
+.owl-theme {
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      width: 50px;
+      height: 50px;
+      @include mixins.flexCentering("");
+      position: absolute;
+      top: 50%;
+      z-index: 4;
+      background-color: vars.$light !important;
+      color: vars.$dark !important;
+      border-radius: vars.$radius;
+      top: 50%;
+      transform: translateY(-50%);
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+      &:hover {
+        color: vars.$light !important;
+        background-color: vars.$dark !important;
+        box-shadow: vars.$shadow-sm;
+      }
+    }
+    .owl-prev {
+      left: 1.5rem;
+    }
+    .owl-next {
+      right: 1.5rem;
+    }
+  }
+}
+
+[dir="rtl"] .owl-theme {
+  .owl-nav {
+    .owl-prev {
+      left: auto;
+      right: 1.5rem;
+    }
+    .owl-next {
+      right: auto;
+      left: 1.5rem;
+    }
+  }
+}

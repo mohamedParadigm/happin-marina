@@ -1,0 +1,42 @@
+// Variables
+@use "../components/helpers/variables" as vars;
+// Mixins
+@use "../components/helpers/mixins";
+
+%btn {
+  @include mixins.flexCentering("");
+  @include mixins.prefix(transition, vars.$smooth, webkit moz);
+  padding: 0.5rem 1rem;
+  border-radius: vars.$radius;
+  text-align: center;
+  height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid transparent;
+}
+
+.btn-main {
+  @extend %btn;
+  background-color: vars.$main-color;
+  color: vars.$light;
+  border-color: vars.$main-color;
+  &:hover {
+    background-color: transparent;
+    border-color: vars.$light;
+  }
+}
+.btn-transparent {
+  @extend %btn;
+  background-color: transparent;
+  color: vars.$light;
+  border-color: vars.$light;
+  &:hover {
+    background-color: vars.$main-color;
+    border-color: vars.$main-color;
+  }
+}
+.btn-dark {
+  color: vars.$light !important;
+  background-color: vars.$dark !important;
+  border-color: vars.$dark !important;
+}

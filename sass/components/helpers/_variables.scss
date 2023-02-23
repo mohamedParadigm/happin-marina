@@ -1,0 +1,31 @@
+$main-color: #bead8e;
+$alt-color: #bead8e;
+$border-color: #dee2e6;
+$light: #fff;
+$dark: #444;
+$text-color: #666666;
+
+$spacing: 4px;
+$radius: 0.375rem;
+$smooth: 0.5s ease-in-out;
+
+$shadow-sm: 0px 0px 25px rgba(0, 0, 0, 0.05);
+
+$en-font-family: "Roboto", sans-serif;
+$ar-font-family: "Cairo", sans-serif;
+$font-size: 14px;
+$line-height: 1.5;
+$font-weight: 400;
+
+// Min Breakpoints
+$min-sm: "min-width: 576px";
+$min-md: "min-width: 768px";
+$min-lg: "min-width: 992px";
+$min-xl: "min-width: 1200px";
+$min-xxl: "min-width: 1400px";
+// Max Breakpoints
+$max-sm: "max-width: 575px";
+$max-md: "max-width: 767px";
+$max-lg: "max-width: 991px";
+$max-xl: "max-width: 1199px";
+$max-xxl: "max-width: 1399px";

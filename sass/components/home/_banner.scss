@@ -1,0 +1,124 @@
+// Variables
+@use "../helpers/variables" as vars;
+// Mixins
+@use "../helpers/mixins";
+
+.home-banner {
+  .banner-item {
+    height: 100vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    @include mixins.flexCentering("");
+    color: vars.$light;
+    text-align: center;
+    .banner-item-img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      max-height: 100% !important;
+      @include mixins.prefix(
+        animation,
+        zoomIn 15s 2s linear infinite alternate,
+        webkit moz o ms
+      );
+    }
+    &::before {
+      content: "";
+      @include mixins.overlay(rgba(vars.$dark, 0.6));
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    .banner-item-sub-title {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+    .banner-item-title {
+      text-transform: capitalize;
+      font-size: calc(2.5rem + 2vw);
+      line-height: 1.1;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (vars.$max-lg) {
+    .owl-theme {
+      .owl-nav {
+        .owl-prev,
+        .owl-next {
+          bottom: 2rem;
+          top: auto;
+        }
+        .owl-prev {
+          left: 1rem;
+          right: auto;
+        }
+        .owl-next {
+          left: calc(1rem + 1rem + 50px);
+          right: auto;
+        }
+      }
+    }
+  }
+  @media screen and (vars.$min-lg) {
+    .owl-theme {
+      .owl-nav {
+        .owl-prev,
+        .owl-next {
+          @include mixins.prefix(transition, vars.$smooth, webkit moz);
+          opacity: 0;
+        }
+        .owl-prev {
+          left: 0;
+        }
+        .owl-next {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (vars.$min-lg) {
+  .home-banner {
+    &:hover {
+      .owl-theme {
+        .owl-nav {
+          .owl-prev,
+          .owl-next {
+            opacity: 1;
+          }
+          .owl-prev {
+            left: 1.5rem;
+          }
+          .owl-next {
+            right: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
