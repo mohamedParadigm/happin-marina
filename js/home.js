@@ -11,7 +11,7 @@ $(function () {
     homeBannerSlider.owlCarousel({
       items: 1,
       loop: true,
-      // lazyLoad: true,
+      lazyLoad: true,
       // lazyLoadEager: 1,
       animateIn: "fadeIn",
       animateOut: "fadeOut",
