@@ -1,0 +1,44 @@
+// Variables
+@use "../helpers/variables" as vars;
+// Mixins
+@use "../helpers/mixins";
+
+.facilities {
+  background-image: url("../images/home/h1-features-img_1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  .facility-item {
+    padding: 30px 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: vars.$light;
+    border-radius: vars.$radius;
+    box-shadow: vars.$shadow-sm;
+    color: vars.$dark;
+    position: relative;
+    @include mixins.prefix(transition, vars.$smooth, webkit moz);
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1.5rem;
+      color: inherit;
+    }
+    .facility-item-label {
+      margin-bottom: 0;
+      text-transform: capitalize;
+    }
+    &:hover {
+      @include mixins.prefix(
+        transform,
+        translateY(-5px) scale(1.05),
+        webkit moz ms o
+      );
+      color: vars.$light;
+      background-color: vars.$main-color;
+    }
+  }
+}

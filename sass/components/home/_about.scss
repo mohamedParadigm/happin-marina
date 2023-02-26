@@ -13,16 +13,6 @@
   //   z-index: -1;
   // }
   .info {
-    .about-sub-title {
-      color: vars.$main-color;
-      font-size: calc(1rem + 0.25vw);
-      line-height: 1.5;
-      font-weight: 500;
-    }
-    .about-title {
-      font-size: calc(2rem + 1vw);
-      font-weight: 700;
-    }
     @media screen and (vars.$max-lg) {
       margin-bottom: 100px;
     }

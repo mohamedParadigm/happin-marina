@@ -141,12 +141,15 @@ img {
     flex-grow: 1;
   }
 }
-.p-100 {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.p-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .text-main {
   color: vars.$main-color;
+}
+.icon {
+  display: flex;
 }
 .blur-up {
   filter: blur(5px);

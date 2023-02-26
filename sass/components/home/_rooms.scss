@@ -1,0 +1,98 @@
+// Variables
+@use "../helpers/variables" as vars;
+// Mixins
+@use "../helpers/mixins";
+
+.room-item {
+  background-color: vars.$light;
+  box-shadow: vars.$shadow-sm;
+  border-radius: vars.$radius;
+  overflow: hidden;
+  .room-item-image {
+    overflow: hidden;
+    display: flex;
+    img {
+      width: 100%;
+      height: auto;
+      @include mixins.prefix(transition, vars.$smooth !important, webkit moz);
+    }
+  }
+  .room-item-info {
+    text-align: center;
+    .room-item-facilities {
+      position: relative;
+      top: -25px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+      background-color: vars.$light;
+      box-shadow: vars.$shadow-sm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      .room-item-facility {
+        flex: 1;
+        text-align: center;
+      }
+    }
+    .room-item-title {
+      font-size: calc(1rem + 0.5vw);
+      @include mixins.truncate(1);
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    hr {
+      margin-bottom: 0;
+    }
+    .room-item-desc {
+      margin-bottom: 0;
+      @include mixins.truncate(3);
+      min-height: 63px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .other-options {
+      display: flex;
+      text-align: initial;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      .other-options-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex: 1;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+        .other-options-item-label {
+          font-weight: 500;
+        }
+      }
+    }
+    .price {
+      font-weight: 700;
+      margin-bottom: 0;
+      font-size: calc(1rem + 0.25vw);
+      color: vars.$main-color;
+    }
+    .btn-main {
+      &:hover {
+        color: vars.$light;
+        background-color: vars.$dark;
+        border-color: vars.$dark;
+      }
+    }
+  }
+  &:hover {
+    .room-item-image {
+      img {
+        @include mixins.prefix(transform, scale(1.1), webkit moz ms o);
+      }
+    }
+  }
+}

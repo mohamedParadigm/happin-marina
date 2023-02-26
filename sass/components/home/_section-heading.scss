@@ -1,0 +1,16 @@
+// Variables
+@use "../helpers/variables" as vars;
+
+.section-heading {
+  .section-heading-sub-title {
+    color: vars.$main-color;
+    font-size: calc(1rem + 0.25vw);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .section-heading-title {
+    font-size: calc(2rem + 1vw);
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}
