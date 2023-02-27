@@ -8,6 +8,10 @@
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
   }
+  .owl-carousel.single_room_slider .owl-stage {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .rooms-btn {
     .btn {
       width: 50px;
@@ -46,6 +50,7 @@
     text-align: center;
     .room-item-facilities {
       position: relative;
+      z-index: 3;
       top: -25px;
       width: 90%;
       margin-left: auto;

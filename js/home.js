@@ -91,6 +91,19 @@ $(function () {
         },
       },
       ...commonSliderProps,
+      loop: false,
+      autoplay: false,
+    });
+
+    $(".single_room_slider").owlCarousel({
+      margin: 0,
+      dots: false,
+      nav: true,
+      mouseDrag: false,
+      touchDrag: false,
+      pullDrag: false,
+      ...commonSliderProps,
+      autoplay: false,
     });
 
     if (roomsPrevArrow.length !== 0 && roomsNextArrow.length !== 0) {
