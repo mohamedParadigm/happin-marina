@@ -1,5 +1,6 @@
 $(function () {
   ("use strict");
+  // Passive Listeners
   (function ($) {
     $.event.special.touchstart = {
       setup: function (_, ns, handle) {
@@ -50,8 +51,15 @@ $(function () {
     if (bookFormWrapper.length !== 0) {
       if ($(window).width() >= 992) {
         if (scroll > $(window).height() + bookFormWrapper.innerHeight()) {
-          !bookFormWrapper.hasClass("fixed") &&
-            bookFormWrapper.addClass("fixed");
+          if (!bookFormWrapper.hasClass("fixed")) {
+            bookFormWrapper.fadeOut(300, function () {
+              $(this)
+                .addClass("fixed")
+                .slideDown(300, function () {
+                  $(this).css("display", "flex");
+                });
+            });
+          }
         } else {
           bookFormWrapper.hasClass("fixed") &&
             bookFormWrapper.removeClass("fixed");

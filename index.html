@@ -93,7 +93,7 @@
 
         <!-- Start of Book Form -->
         <div
-          class="offcanvas offcanvas-bottom text-bg-dark book-form-canvas"
+          class="offcanvas offcanvas-bottom text-bg-dark book-form-canvas p-3"
           tabindex="-1"
           id="bookFormOffcanvas"
           aria-labelledby="bookFormOffcanvasLabel"
@@ -241,7 +241,7 @@
         <!-- End of Book Form -->
 
         <!-- Start of About Section -->
-        <section class="home-about p-80">
+        <section class="home-about py-80">
           <!-- <img
             src="images/home/h1-about-bg.png"
             data-src="images/home/h1-about-bg.png"
@@ -411,7 +411,7 @@
         <!-- End of About Section -->
 
         <!-- Start of Facilities Section -->
-        <section class="facilities p-80">
+        <section class="facilities py-80">
           <div class="container">
             <div class="section-heading text-center mb-5">
               <span class="section-heading-sub-title">Our Facilites</span>
@@ -738,11 +738,48 @@
         <!-- End of Facilities Section -->
 
         <!-- Start of Rooms Section -->
-        <section class="rooms p-80">
+        <section class="rooms py-80">
           <div class="container">
             <div class="section-heading text-center mb-5">
               <span class="section-heading-sub-title">Rooms</span>
-              <h2 class="section-heading-title">view rooms with options</h2>
+              <h2 class="section-heading-title mb-3">
+                view rooms with options
+              </h2>
+
+              <div
+                class="row justify-content-between align-items-center rooms-btn"
+                id="roomsCustomArrows"
+              >
+                <div class="col-auto">
+                  <a href="#" class="btn-dark">View all rooms</a>
+                </div>
+                <div class="col-auto">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <button class="btn rooms-btn-prev" type="button">
+                        <img
+                          src="images/icons/arrow-left-w.svg"
+                          alt="prev"
+                          width="24"
+                          height="24"
+                          class="flip-icon-rtl"
+                        />
+                      </button>
+                    </div>
+                    <div class="col-auto">
+                      <button class="btn rooms-btn-next" type="button">
+                        <img
+                          src="images/icons/arrow-right-w.svg"
+                          alt="next"
+                          width="24"
+                          height="24"
+                          class="flip-icon-rtl"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="owl-carousel owl-theme" id="roomsSlider">
@@ -1040,6 +1077,234 @@
           </div>
         </section>
         <!-- End of Rooms Section -->
+
+        <!-- Start of Testimonials Section -->
+        <section class="testimonials py-80">
+          <div class="container">
+            <div class="section-heading text-center mb-5">
+              <span class="section-heading-sub-title">Testimonial</span>
+              <h2 class="section-heading-title">What Our Guest Say</h2>
+            </div>
+
+            <div class="owl-carousel owl-theme mb-5" id="testimonialsSlider">
+              <div class="testimonials-item">
+                <img
+                  src="images/icons/left-quote.svg"
+                  alt="quote"
+                  width="50"
+                  height="50"
+                  class="flip-icon-rtl quote"
+                />
+                <div class="mb-3">
+                  <p class="testimonials-item-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis quos eveniet dolore et impedit omnis aspernatur, in
+                    ipsum, temporibus hic asperiores aliquam cum. Porro maxime
+                    id ducimus sapiente saepe dignissimos quaerat. Amet?
+                  </p>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <img
+                      src="images/home/author-testimonial-1.webp"
+                      data-src="images/home/author-testimonial-1.webp"
+                      alt="author-testimonial-1"
+                      width="60"
+                      height="60"
+                      class="owl-lazy blur-up rounded-circle"
+                    />
+                  </div>
+                  <div class="col px-0">
+                    <h3 class="testimonial-author">Jordan Benom</h3>
+                    <p class="mb-0">Guest</p>
+                  </div>
+                  <div class="col-auto">
+                    <ul
+                      class="d-flex align-items-center justify-content-center gap-1"
+                    >
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonials-item">
+                <img
+                  src="images/icons/left-quote.svg"
+                  alt="quote"
+                  width="50"
+                  height="50"
+                  class="flip-icon-rtl quote"
+                />
+                <div class="mb-3">
+                  <p class="testimonials-item-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis quos eveniet dolore et impedit omnis aspernatur, in
+                    ipsum, temporibus hic asperiores aliquam cum. Porro maxime
+                    id ducimus sapiente saepe dignissimos quaerat. Amet?
+                  </p>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <img
+                      src="images/home/author-testimonial-2.webp"
+                      data-src="images/home/author-testimonial-2.webp"
+                      alt="author-testimonial-2"
+                      width="60"
+                      height="60"
+                      class="owl-lazy blur-up rounded-circle"
+                    />
+                  </div>
+                  <div class="col px-0">
+                    <h3 class="testimonial-author">Jordan Benom</h3>
+                    <p class="mb-0">Guest</p>
+                  </div>
+                  <div class="col-auto">
+                    <ul
+                      class="d-flex align-items-center justify-content-center gap-1"
+                    >
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="images/icons/star.svg"
+                          alt="star"
+                          width="16"
+                          height="16"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="row g-2 align-items-center testimonials-btns"
+              id="testimonialsCustomArrows"
+            >
+              <div class="col-12 col-lg">
+                <div class="testimonials-btn btn-testimonials-prev">
+                  <button type="button" class="btn">
+                    <i class="icon flip-icon-rtl">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-left"
+                      >
+                        <line x1="19" y1="12" x2="5" y2="12" />
+                        <polyline points="12 19 5 12 12 5" />
+                      </svg>
+                    </i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 col-lg">
+                <p class="mb-0 fs-6 text-center">We are always keep them happy</p>
+              </div>
+              <div class="col-12 col-lg">
+                <div class="testimonials-btn btn-testimonials-next">
+                  <button type="button" class="btn">
+                    <i class="icon flip-icon-rtl">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-right"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of Testimonials Section -->
       </main>
     </div>
 
@@ -1047,7 +1312,7 @@
     <div class="mobile-book-trigger d-lg-none">
       <button
         type="button"
-        class="btn btn-dark w-100"
+        class="btn w-100"
         data-bs-toggle="offcanvas"
         data-bs-target="#bookFormOffcanvas"
         aria-controls="bookFormOffcanvas"

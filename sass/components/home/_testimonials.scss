@@ -1,0 +1,92 @@
+// Varialbes
+@use "../helpers/variables" as vars;
+// Mixins
+@use "../helpers/mixins";
+
+.testimonials {
+  .owl-carousel {
+    .owl-item {
+      padding: 1rem 2rem;
+    }
+  }
+  .testimonials-item {
+    position: relative;
+    padding: 2.5rem 1rem;
+    border-radius: vars.$radius;
+    border: 1px solid #eee;
+    @include mixins.prefix(
+      transition,
+      border-color 0.5s ease-in-out,
+      webkit moz
+    );
+    &:hover {
+      border-color: vars.$main-color;
+    }
+    .quote {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -16px;
+      left: -24px;
+      background-color: vars.$light;
+    }
+    .testimonials-item-content {
+      margin-bottom: 0;
+      font-size: calc(1rem + 0.25vw);
+      line-height: 1.5;
+      @include mixins.truncate(5);
+    }
+    .testimonial-author {
+      margin-bottom: 0;
+      font-size: calc(1rem + 0.5vw);
+    }
+  }
+  .testimonials-btns {
+    .testimonials-btn {
+      position: relative;
+      .btn {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: vars.$radius;
+        background-color: vars.$main-color;
+        border-color: vars.$main-color;
+        color: vars.$light;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        @include mixins.prefix(transform, translateY(-50%), webkit moz ms o);
+        width: calc(100% - 60px);
+        border: 1px dashed vars.$main-color;
+      }
+      &.btn-testimonials-prev {
+        &::after {
+          left: 60px;
+        }
+      }
+      &.btn-testimonials-next {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        &::after {
+          right: 60px;
+        }
+      }
+    }
+  }
+}
+[dir="rtl"] {
+  .testimonials {
+    .testimonials-item {
+      .quote {
+        left: auto;
+        right: -24px;
+      }
+    }
+  }
+}

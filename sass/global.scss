@@ -141,7 +141,7 @@ img {
     flex-grow: 1;
   }
 }
-.p-80 {
+.py-80 {
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -163,6 +163,9 @@ img {
   .flip-icon-rtl {
     @include mixins.prefix(transform, scaleX(-1), webkit moz);
   }
+}
+.w-fit {
+  width: fit-content !important;
 }
 // Bootstrap Resets
 

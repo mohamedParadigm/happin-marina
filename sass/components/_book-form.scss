@@ -69,6 +69,13 @@
     .btn {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      background-color: vars.$main-color;
+      color: vars.$light;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
   }
   .offcanvas.book-form-canvas {

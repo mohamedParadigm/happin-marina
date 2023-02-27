@@ -1,1 +1,29 @@
-@use "routes/home";
+// OWL
+@use "owl-carousal/core";
+@use "owl-carousal/animate";
+@use "owl-carousal/lazyload";
+@use "owl-carousal/nav";
+
+// Section Heading
+@use "components/home/section-heading";
+// Banner Section
+@use "components/home/banner";
+// Book Form
+@use "components/book-form";
+// About Section
+@use "components/home/about";
+// Facilities Section
+@use "components/home/facilites";
+// Rooms Section
+@use "components/home/rooms";
+// Testimonials
+@use "components/home/testimonials";
+
+@media screen and (min-width: 992px) {
+  body {
+    padding-bottom: 120px;
+  }
+  .back-to-top {
+    bottom: 100px;
+  }
+}

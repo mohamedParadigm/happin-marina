@@ -36,6 +36,7 @@
   }
 }
 .btn-dark {
+  @extend %btn;
   color: vars.$light !important;
   background-color: vars.$dark !important;
   border-color: vars.$dark !important;
