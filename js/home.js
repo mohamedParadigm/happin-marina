@@ -88,6 +88,7 @@ $(function () {
         },
         1200: {
           items: 4,
+          margin: 25,
         },
       },
       ...commonSliderProps,

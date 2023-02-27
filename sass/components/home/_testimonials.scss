@@ -88,5 +88,21 @@
         right: -24px;
       }
     }
+    .testimonials-btns {
+      .testimonials-btn {
+        &.btn-testimonials-prev {
+          &::after {
+            left: auto;
+            right: 60px;
+          }
+        }
+        &.btn-testimonials-next {
+          &::after {
+            right: auto;
+            left: 60px;
+          }
+        }
+      }
+    }
   }
 }
